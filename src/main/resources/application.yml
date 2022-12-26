@@ -1,0 +1,21 @@
+server:
+  port: 8000
+
+keycloak:
+  realm: keycloak-db-test
+  auth-server-url: http://localhost:8089/auth
+  ssl-required: external
+  resource: my_client
+  credentials:
+    secret: 25a6b273-d214-4a8e-b3db-9c4606a5cb5e
+  use-resource-role-mappings: true
+  bearer-only: true
+
+logging:
+  level:
+    root: INFO
+    com.codky.sample.keycloak: DEBUG
+
+spring:
+  main:
+    allow-circular-references: true
